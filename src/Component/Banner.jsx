@@ -1,13 +1,13 @@
 import React from "react";
 import "./Banner.css";
-import myVideo from "../assets/bannervideo.mp4";
+
 
 
 function Banner() {
   return (
     <div className="banner">
       <video autoPlay loop muted className="banner-video">
-        <source src={myVideo} type="video/mp4" />
+        <source src="https://drive.google.com/file/d/1ts757YG05gTbUeA6Y89Y6ot5o4iemP3-/view?usp=drive_link" type="video/mp4" />
       </video>
 
       <div className="overlay">
