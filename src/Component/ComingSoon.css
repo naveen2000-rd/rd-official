@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 20px;
+  }
+  
+  .subscription {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .subscription input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .subscription button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscription button:hover {
+    background-color: #0056b3;
+  }
+  
