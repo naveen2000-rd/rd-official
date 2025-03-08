@@ -1,0 +1,92 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@import "leaflet/dist/leaflet.css";
+
+/* Responsive text sizes for mobile screens */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p,
+  span,
+  li,
+  a {
+    font-size: 14px;
+  }
+
+  .service-card h3 {
+    padding: 0;
+  }
+
+  .stat-item {
+    flex: 0;
+    min-width: 0px;
+    margin: 10px;
+    margin-bottom: 0;
+  }
+  .stat-item p {
+    font-size: 2.2rem !important;
+  }
+
+  .stat-item span {
+    font-size: 34px !important;
+  }
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p,
+  span,
+  li,
+  a {
+    font-size: 13px;
+  }
+
+  .service-card h3 {
+    padding: 0;
+  }
+  .stat-item {
+    flex: 0;
+    min-width: 0px;
+    margin: 10px;
+    margin-bottom: 0;
+  }
+  .stat-item p {
+    font-size: 2.2rem !important;
+  }
+
+  .stat-item span {
+    font-size: 34px !important;
+  }
+}
