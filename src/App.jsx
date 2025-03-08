@@ -7,6 +7,7 @@ import Footer from "./Component/Footer";
 import Header from "./Component/Header";
 import Services from "./Component/Services";
 import StatsSection from "./Component/StatsSection";
+import ComingSoon from "./Component/Comingsoon";
 
 
 function App() {
