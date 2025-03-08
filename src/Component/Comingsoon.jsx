@@ -7,10 +7,7 @@ const ComingSoon = () => {
       <div className="content">
         <h1>Coming Soon</h1>
         <p>We're working hard to bring something amazing. Stay tuned!</p>
-        <div className="subscription">
-          <input type="email" placeholder="Enter your email" />
-          <button>Notify Me</button>
-        </div>
+       
       </div>
     </div>
   );
