@@ -13,8 +13,8 @@ import ComingSoon from "./Component/Comingsoon";
 function App() {
   return (
     <>
-    <ComingSoon></ComingSoon>
-      {/* <Header />
+   
+    <Header />
       <section id="banner"><Banner /></section>
       <section id="about"><AboutUs /></section>
       <section id="services"><Services /></section>
@@ -22,7 +22,7 @@ function App() {
       <section id="blog"><BlogSection /></section>
       
       <section id="contact"><ContactForm /></section>
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
