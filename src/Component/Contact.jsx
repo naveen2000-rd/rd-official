@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa"; // FontAwesome Icons
 import "./Contact.css"; // Import CSS file
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+
 
 const ContactForm = () => {
   const position = [11.0168, 76.9558];
@@ -15,7 +15,7 @@ const ContactForm = () => {
   });
   const [isChecked, setIsChecked] = useState(false);
   const [errors, setErrors] = useState({});
-  
+  const [loading, setLoading] = useState(false);
 
   const loanOptions = [
     "Personal Loan",
@@ -27,9 +27,6 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    if (!checked) {
-      alert("hg");
-    }
   };
 
   const handleCheckboxChange = (e) => {
@@ -54,9 +51,8 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-
     if (validateForm()) {
+      setLoading(true);
       try {
         const response = await fetch("https://rudronil-1.onrender.com/submit", {
           method: "POST",
@@ -84,15 +80,16 @@ const ContactForm = () => {
       } catch (error) {
         console.error("Error submitting form:", error);
         alert("Failed to submit form. Please try again later.");
+      } finally {
+        setLoading(false);
       }
     }
   };
 
   return (
     <div className="contact-container">
-      {/* Left Side - Contact Form */}
       <div className="contact-form">
-        <h2>Contact Us</h2>
+        <h2>Apply for a loan</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -171,61 +168,24 @@ const ContactForm = () => {
             <label htmlFor="terms">I agree to the Terms and Conditions</label>
           </div>
 
-          <button type="submit" disabled={!isChecked}>
-            Submit
+          <button type="submit" disabled={!isChecked || loading}>
+            {loading ? "Submitting..." : "Submit"}
           </button>
         </form>
       </div>
-
-      <div>
-        <div className="board">
-          <h1>BOARD MEMBERS</h1>
-
-          <div className="board-members">
-            <div className="Board-1">
-              <p className="b-name">Naveen Sankar</p>
-              <p className="b-role">Founder & CEO</p>
-              {/* <p className="b-mail">
-                <FaEnvelope /> naveen.sankar@rudronilfinserv.com
-              </p> */}
-            </div>
-
-            <div className="Board-2">
-              <p className="b-name">Krishnaveni Sankar</p>
-              <p className="b-role">Operation's Head</p>
-              {/* <p className="b-mail">
-                <FaEnvelope /> Krishnaveni.s@rudronilfinserv.com
-              </p> */}
-            </div>
+      <div className="board">
+        <h1>BOARD MEMBERS</h1>
+        <div className="board-members">
+          <div className="Board-1">
+            <p className="b-name">Naveen Sankar</p>
+            <p className="b-role">Founder & CEO</p>
+          </div>
+          <div className="Board-2">
+            <p className="b-name">Krishnaveni Sankar</p>
+            <p className="b-role">Operation's Head</p>
           </div>
         </div>
-        {/* <div className="map-container">
-          <MapContainer
-            center={position}
-            zoom={13}
-            scrollWheelZoom={false}
-            style={{ height: "400px", width: "100%" }}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={position}></Marker>
-          </MapContainer>
-        </div> */}
       </div>
-
-      {/* Right Side - Address Details
-      <div className="contact-info">
-        <h2>Our Office</h2>
-        <p><FaMapMarkerAlt /> MJT Building, First Floor</p>
-        <p>9-A, Bharathiyar Road, P.N. Palayam</p>
-        <p>Coimbatore-641 037</p>
-        
-        <h3>Contact Details</h3>
-        <p><FaPhoneAlt /> +91 98765 43210</p>
-        <p><FaEnvelope /> info@example.com</p>
-      </div> */}
     </div>
   );
 };

@@ -11,7 +11,7 @@ import {
   faPiggyBank,
   faChartLine,
   faBuilding,
-  faLaptop
+  faLaptop,
 } from "@fortawesome/free-solid-svg-icons";
 
 const services = [
@@ -67,18 +67,75 @@ const services = [
   },
 ];
 
+const investment = [
+  {
+    icon: faUser,
+    type: "Mutual Funds & SIPs",
+    text: "Secure your future with the best investment plans.",
+  },
+  {
+    icon: faHome,
+    type: "Stock Market Advisory",
+    text: "Expert insights for high returns.",
+  },
+  {
+    icon: faBriefcase,
+    type: "Tax-Saving Investments",
+    text: "Reduce tax liability while growing wealth.",
+  },
+];
+
 function Services() {
   return (
     <div className="services">
       <h1>OUR SERVICES</h1>
-      <div className="service-grid">
-        {services.map((service, index) => (
-          <div key={index} className="service-card">
-            <FontAwesomeIcon icon={service.icon} style={{ color: "#007bff", fontSize: "40px", marginBottom: "10px" }} />
-            <h3>{service.type}</h3>
-            <p>{service.text}</p>
-          </div>
-        ))}
+      <div className="services_sec">
+        <h3 className="head_type">
+          Loans & Accounts Services – Secure Your Financial Future
+        </h3>
+        <div className="service-grid">
+          {services.map((service, index) => (
+            <div key={index} className="service-card">
+              <FontAwesomeIcon
+                icon={service.icon}
+                style={{
+                  color: "hsl(190.61deg 80.33% 35.88%)",
+                  fontSize: "40px",
+                  marginBottom: "10px",
+                }}
+              />
+              <h3>{service.type}</h3>
+              <p>{service.text}</p>
+            </div>
+          ))}
+        </div>
+        <h3 className="head_type">
+          {" "}
+          Investment Solutions – Grow Your Wealth Securely
+        </h3>
+        <div className="service-grid">
+          {investment.map((investment, index) => (
+            <div key={index} className="service-card">
+              <FontAwesomeIcon
+                icon={investment.icon}
+                style={{
+                  color: "hsl(190.61deg 80.33% 35.88%)",
+                  fontSize: "40px",
+                  marginBottom: "10px",
+                }}
+              />
+              <h3>{investment.type}</h3>
+              <p>{investment.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="viewmore_serv">
+          <p className="service_viewmore">
+       
+            <a href="/services">View More</a>
+          </p>
+        </div>
       </div>
     </div>
   );

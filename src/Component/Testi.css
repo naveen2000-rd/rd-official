@@ -1,0 +1,249 @@
+.Testi {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+  }
+  
+ .Testi h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: hsl(190.61deg 80.33% 35.88%);
+  }
+  
+  .Testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .Testi .head_type{
+    font-size: 26px;
+    color: hsl(190.61deg 80.33% 35.88%);
+    margin: 40px 0 25px 0;
+  }
+  
+  .Testi-card {
+    background: hsl(190.61deg 80.33% 35.88%);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+  }
+  
+  .Testi-card img {
+    width: 35%;
+    height: 58px;
+    object-fit: cover;
+    margin: 25px 0 0 0;
+    border-radius: 14px;
+  }
+  
+  .Testi-card h3 {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .Testi-card p {
+    font-size: 14px;
+    color: white;
+    padding: 0 15px;
+    margin-top: -10px;
+  }
+  
+  .Testi-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .Testi_viewmore {
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 25px;
+    width: 15%;
+  }
+  
+  .Testi_viewmore a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .viewmore_serv{
+    display: flex
+    ;
+        justify-content: center;
+        align-items: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .Testi-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .Testi .head_type{
+      font-size: 20px;
+      color: black;
+      margin: 40px 0 25px 0;
+    }
+
+    .Testi-card h3 {
+      padding: 15px;
+      font-size: 14px;
+      font-weight: 600;
+      color: black;
+    }
+
+    .Testi-card p {
+      font-size: 12px;
+      color: black;
+      padding: 0 15px;
+      margin-top: -10px;
+    }
+
+    .Testi_viewmore {
+      width: 18%;
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    .Testi-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  
+    .Testi-card img {
+      height: 55px;
+    }
+  
+    .Testi-card h3 {
+      font-size: 14px;
+    }
+  
+    .Testi-card p {
+      font-size: 12px;
+    }
+
+    .Testi_viewmore {
+      width: 25%;
+    }
+  }
+  
+
+  /* Keep your existing styles */
+
+/* Loading Animation - Fade & Scale Up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Testi Section Animation */
+.Testi {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Testi Cards Animation - Load One by One */
+.Testi-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+/* Delaying each card for a staggered effect */
+.Testi-card:nth-child(1) { animation-delay: 0.2s; }
+.Testi-card:nth-child(2) { animation-delay: 0.4s; }
+.Testi-card:nth-child(3) { animation-delay: 0.6s; }
+.Testi-card:nth-child(4) { animation-delay: 0.8s; }
+.Testi-card:nth-child(5) { animation-delay: 1s; }
+
+/* Testi Card Hover Effect */
+.Testi-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth Image Appear */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.Testi-card img {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .Testi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .Testi-card {
+    animation-duration: 0.6s;
+  }
+}
+
+@media (max-width: 480px) {
+  .Testi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .Testi-card img {
+    height: 150px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.Testi-card h3{
+  padding: 0;
+}
+
+.Testi path{
+  color: white;
+} 
+
+
+.Testi-card svg{
+  margin-top: 15px;
+}
+
+/* Responsive text sizes for mobile screens */
+@media screen and (max-width: 768px) {
+
+.Testi-card h3{
+  padding: 0;
+}
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 480px) {
+
+
+.Testi-card h3{
+  padding: 0;
+}
+}
+

@@ -1,0 +1,83 @@
+/* EMI Wrapper - Two Column Layout */
+.emi-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Left Side - Calculator */
+  .emi-calculator {
+    width: 50%;
+    padding: 20px 40px;
+    background: rgb(18, 139, 165);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  /* Input Groups */
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  /* EMI Result */
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    color: rgb(18, 139, 165);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  /* Right Side - Pie Chart */
+  .emi-chart {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .emi-chart h2 {
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .emi-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .emi-calculator,
+    .emi-chart {
+      width: 100%;
+    }
+  }
+  

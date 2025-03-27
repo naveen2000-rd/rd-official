@@ -1,0 +1,41 @@
+.blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Ensure items are centered */
+.blog-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.article-btn{
+
+    color: black;
+   
+}
+
+.blog-main{
+    text-align: center;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .blog {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog {
+        grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
+    }
+}

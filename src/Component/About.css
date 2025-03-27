@@ -1,6 +1,6 @@
 .about {
     padding: 80px 20px;
-    background-color: hsl(190.61deg 80.33% 35.88%);
+    background-color: white;
     display: flex;
     justify-content: center;
   }
@@ -31,12 +31,16 @@
   .about-content h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
-    color: white;
+    color: hsl(190.61deg 80.33% 35.88%);
+  }
+
+  .about-content h3 {
+    color: black;
   }
   
   .about-content p {
     font-size: 1.1rem;
-    color: white;
+    color: black;
     line-height: 1.6;
     margin-bottom: 10px;
   }
@@ -47,15 +51,42 @@
     font-size: 16px;
     border: none;
     border-radius: 25px;
-    background-color: white;
+    background-color: hsl(190.61deg 80.33% 35.88%);
     color: black;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
   
   .about-btn:hover {
-    background-color: white;
+    background-color: hsl(190.61deg 80.33% 35.88%);
     transform: scale(1.05);
+  }
+
+  .abt_viewmore {
+    padding: 10px 15px;
+    background-color: hsl(190.61deg 80.33% 35.88%);
+    border-radius: 25px;
+    width: 15%;
+  }
+  
+  .abt_viewmore a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .viewmore_serv{
+    display: flex
+    ;
+        justify-content: center;
+        align-items: center;
+  }
+
+  .list_about{
+    color: black;
+  }
+
+  .our_abt{
+    color: black;
   }
   
   /* Responsive */
@@ -71,6 +102,17 @@
   
     .about-btn {
       margin-top: 20px;
+    }
+
+    .service_viewmore {
+      width: 18%;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .service_viewmore {
+      width: 25%;
     }
   }
   

@@ -11,17 +11,24 @@ function AboutUs() {
         </div>
         <div className="about-content">
           <h2>About Us</h2>
+          <h3>Who We Are – A Legacy of Trust & Excellence</h3>
           <p>
-            We are committed to providing top-notch financial solutions tailored to your needs.
-            With years of expertise, we help individuals and businesses achieve their financial goals
-            through our range of services, including loans, investments, and banking solutions.
+            Rudronil Financial Pvt Ltd has been a pioneer in providing financial
+            solutions for over a decade. Our mission is to offer hassle-free
+            financial assistance with transparency and integrity.
           </p>
-          <p>
-            Our mission is to make financial services accessible, transparent, and seamless.
-            Whether you're looking for a personal loan, a business investment, or a home loan,
-            we have the right solutions for you.
+          <h4 className="our_abt">Our Values:</h4>
+          <ul className="list_about">
+            <li>Trust – We prioritize customer satisfaction.</li>
+            <li>Transparency – No hidden charges.</li>
+            <li>Efficiency – Quick loan approvals and processing.</li>
+          </ul>
+          <div className="viewmore_serv">
+          <p className="abt_viewmore">
+            {" "}
+            <a href="/about">View More</a>{" "}
           </p>
-          <button className="about-btn">Learn More</button>
+        </div>
         </div>
       </div>
     </section>

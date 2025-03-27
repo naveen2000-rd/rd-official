@@ -1,29 +1,32 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import AboutUs from "./Component/About";
-import Banner from "./Component/Banner";
-import BlogSection from "./Component/BlogSection";
-import ContactForm from "./Component/Contact";
 import Footer from "./Component/Footer";
 import Header from "./Component/Header";
-import Services from "./Component/Services";
-import StatsSection from "./Component/StatsSection";
-import ComingSoon from "./Component/Comingsoon";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import ServicesList from "./Pages/Services";
+import EMICalculator from "./Pages/EMI";
+import ContactUs from "./Pages/ContactUS";
+import Blogs from "./Pages/Blog";
+
+
 
 
 function App() {
   return (
-    <>
-   
-    <Header />
-      <section id="banner"><Banner /></section>
-      <section id="about"><AboutUs /></section>
-      <section id="services"><Services /></section>
-      <section id="stats"><StatsSection /></section>
-      <section id="blog"><BlogSection /></section>
-      
-      <section id="contact"><ContactForm /></section>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<ServicesList />} />
+        <Route path="/emi-calculator" element={<EMICalculator />} />
+        <Route path="/blog" element={<Blogs />} />
+        <Route path="/contact" element={<ContactUs />} />
+
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

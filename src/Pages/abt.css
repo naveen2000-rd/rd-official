@@ -1,0 +1,100 @@
+/* General container styling */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light grey background */
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Header section */
+  .header-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header-section h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .header-section h3 {
+    color: white;
+    font-size: 18px;
+  }
+  
+  /* Using Flexbox to arrange sections properly */
+  .about-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Individual section styling */
+  .section {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .section:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Headings */
+  .section h2 {
+    color: rgb(18, 139, 165);
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .section p{
+    color: black;
+  }
+  
+  .section h3 {
+    color: rgb(18, 139, 165);
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  
+  /* List styling */
+  .section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .section ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .section ul li::before {
+    content: "✔";
+    color: green;
+    margin-right: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-sections {
+      flex-direction: column;
+    }
+  
+    .section {
+      width: 100%;
+    }
+  }
+  

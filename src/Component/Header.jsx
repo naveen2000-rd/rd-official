@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMobileAlt, faEnvelope, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faMobileAlt,
+  faEnvelope,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import logoimage from "../assets/logo.jpeg";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,25 +33,26 @@ function Header() {
       <header className="header">
         <div className="header_one">
           <p>
-            <FontAwesomeIcon icon={faMobileAlt} /> +91 89399 41406
+            <FontAwesomeIcon icon={faMobileAlt} /> <a href="tel:+918939941406">+91 89399 41406</a>
           </p>
           <p>
-            <FontAwesomeIcon icon={faMobileAlt} /> 0422 4541450
+            <FontAwesomeIcon icon={faMobileAlt} /> <a href="tel:04224541450">0422 4541450</a>
           </p>
           <p>
-            <FontAwesomeIcon icon={faEnvelope} /> naveen.sankar@rudronilfinserv.com
+            <FontAwesomeIcon icon={faEnvelope} />{" "}
+            <a href="mailto:naveen.sankar@rudronilfinserv.com">naveen.sankar@rudronilfinserv.com</a>
           </p>
         </div>
         <div className="header_two">
           <p>Follow us :</p>
           <p>
-            <FontAwesomeIcon icon={faFacebook} /> Facebook
+            <FontAwesomeIcon icon={faFacebook} /> <a href="https://www.facebook.com/share/12KMsgsHPqQ/" target="_blank">Facebook</a>
           </p>
           <p>
-            <FontAwesomeIcon icon={faInstagram} /> Instagram
+            <FontAwesomeIcon icon={faInstagram} /> <a href="https://www.instagram.com/rudronil_finserv?igsh=MXg2YTN0MnU5dmp4cw==" target="_blank">Instagram</a>
           </p>
           <p>
-            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+            <FontAwesomeIcon icon={faLinkedin} /> <a href="#">LinkedIn</a>
           </p>
         </div>
       </header>
@@ -49,14 +60,15 @@ function Header() {
       {/* Navigation Bar */}
       <nav className="nav_menu">
         <div className="logo">
-          
-          <a href="#home" onClick={() => scrollToSection("banner")}><img src={logoimage} alt="" className="logo_style" /></a>
+          <a href="/" onClick={() => scrollToSection("banner")}>
+            <img src={logoimage} alt="Best personal loans with low interest rates" className="logo_style" />
+          </a>
         </div>
 
         {/* Burger Icon for Mobile */}
-        <button 
-          className="burger" 
-          onClick={() => setMenuOpen(!menuOpen)} 
+        <button
+          className="burger"
+          onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
           <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
@@ -64,21 +76,31 @@ function Header() {
 
         {/* Navigation Menu */}
         <div className={`menu_list ${menuOpen ? "open" : ""}`}>
-          <a href="#home" onClick={() => scrollToSection("banner")}>Home</a>
-          <a href="#about" onClick={() => scrollToSection("about")}>About</a>
-          <a href="#services" onClick={() => scrollToSection("services")}>Services</a>
-          <a href="#blog" onClick={() => scrollToSection("blog")}>Blog</a>
-          <a href="#contact" onClick={() => scrollToSection("contact")}>Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/services">Our Services</Link>
+          <Link to="/emi-calculator">EMI Calculator</Link>
+          <Link to="/blog">Blogs</Link>
+          <Link to="/contact">Contact Us</Link>
+         
+         
+         
+         
+         
 
           {/* Get Quote button inside menu for mobile */}
           <div className="btn_quote_mobile">
-            <a href="#quote" onClick={() => scrollToSection("contact")}>Get Quote</a>
+            <a href="/contact" onClick={() => scrollToSection("contact")}>
+              Get Quote
+            </a>
           </div>
         </div>
 
         {/* Get Quote button stays visible on desktop */}
         <div className="btn_quote">
-          <a href="#quote" onClick={() => scrollToSection("contact")}>Get Quote</a>
+          <a href="/contact" onClick={() => scrollToSection("contact")}>
+            Apply for a loan
+          </a>
         </div>
       </nav>
     </div>
