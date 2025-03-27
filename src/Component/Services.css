@@ -24,6 +24,10 @@
     color: white;
     margin: 40px 0 25px 0;
   }
+
+  .head_type{
+    color: white !important;
+  }
   
   .service-card {
     background: white;

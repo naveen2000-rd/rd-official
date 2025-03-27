@@ -36,6 +36,17 @@
     padding: 10px;
     transition: 0.3s;
   }
+
+  .service-card h3{
+    color: black;
+
+  }
+
+ 
+
+  .service-card p{
+    color: black;
+  }
   
   .service-card:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

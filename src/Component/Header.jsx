@@ -76,12 +76,12 @@ function Header() {
 
         {/* Navigation Menu */}
         <div className={`menu_list ${menuOpen ? "open" : ""}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/services">Our Services</Link>
-          <Link to="/emi-calculator">EMI Calculator</Link>
-          <Link to="/blog">Blogs</Link>
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+          <Link to="/services" onClick={() => setMenuOpen(false)}>Our Services</Link>
+          <Link to="/emi-calculator" onClick={() => setMenuOpen(false)}>EMI Calculator</Link>
+          <Link to="/blog" onClick={() => setMenuOpen(false)}>Blogs</Link>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
          
          
          

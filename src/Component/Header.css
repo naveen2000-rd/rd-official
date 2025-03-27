@@ -8,6 +8,16 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.burger{
+  background-color: hsl(190.61deg 80.33% 35.88%);
+  padding: 5px 10px;
+}
+
+.burger path{
+  color: white;
+
+}
+
 .header {
   display: flex;
   justify-content: space-between;
