@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import "./blog.css";
+import "./Blog.css";
 
 const Blogs = () => {
   const [articles, setArticles] = useState([]);
