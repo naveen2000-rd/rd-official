@@ -7,21 +7,30 @@ const Blogs = () => {
 
   console.log(articles);
 
+  // useEffect(() => {
+  //   fetch(
+  //     "https://newsapi.org/v2/top-headlines?category=business&apiKey=7fda3120fce24df287c65c1867725e19"
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       if (Array.isArray(data.articles)) {
+  //         setArticles(data.articles);
+  //       } else {
+  //         console.error("No articles found in response:", data);
+  //         setArticles([]); // Fallback to empty array
+  //       }
+  //     })      .catch((error) => console.error("Error fetching news:", error));
+  // }, []);
+
+
   useEffect(() => {
-    fetch(
-      "https://newsapi.org/v2/top-headlines?category=business&apiKey=7fda3120fce24df287c65c1867725e19"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        if (Array.isArray(data.articles)) {
-          setArticles(data.articles);
-        } else {
-          console.error("No articles found in response:", data);
-          setArticles([]); // Fallback to empty array
-        }
-      })      .catch((error) => console.error("Error fetching news:", error));
+    fetch("http://localhost:5000/api/news")
+      .then((res) => res.json())
+      .then((data) => setArticles(data))
+      .catch((err) => console.error("Error fetching from backend:", err));
   }, []);
 
+  
   return (
     <>
       <Helmet>
