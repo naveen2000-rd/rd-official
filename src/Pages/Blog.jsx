@@ -12,8 +12,14 @@ const Blogs = () => {
       "https://newsapi.org/v2/top-headlines?category=business&apiKey=7fda3120fce24df287c65c1867725e19"
     )
       .then((response) => response.json())
-      .then((data) => setArticles(data.articles))
-      .catch((error) => console.error("Error fetching news:", error));
+      .then((data) => {
+        if (Array.isArray(data.articles)) {
+          setArticles(data.articles);
+        } else {
+          console.error("No articles found in response:", data);
+          setArticles([]); // Fallback to empty array
+        }
+      })      .catch((error) => console.error("Error fetching news:", error));
   }, []);
 
   return (
@@ -29,6 +35,7 @@ const Blogs = () => {
       </Helmet>
       <div style={{ padding: "20px" }} className="blog-main">
         <h1>Latest Business News</h1>
+    
         {articles.length === 0 && <p>Loading...</p>}
         <div className="blog">
           {articles.map((article, index) => (
