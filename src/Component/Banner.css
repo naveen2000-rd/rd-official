@@ -136,9 +136,25 @@
     left: 36%;
   }
 
+  .menu_list {
+    top: 156px;
+  }
+
   .overlay_contact {
     width: 70%;
   }
+
+  .overlay h2 {
+    font-size: 26px;
+}
+
+.banner_cta{
+  display: block;
+  
+}
+.overlay_contact{
+  width: 80%;
+}
 }
 
 @media (max-width: 480px) {
@@ -169,6 +185,21 @@
     left: 50%;
     width: 75%;
 }
+}
+
+@media only screen and (max-width: 400px) {
+  .overlay h2 {
+    font-size: 26px;
+}
+
+.banner_cta{
+  display: block;
+  
+}
+.overlay_contact{
+  width: 80%;
+}
+  
 }
 
 .banner-video {
