@@ -24,13 +24,13 @@ const Blogs = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/news")
+    fetch("https://rudronil-1.onrender.com/api/news")
       .then((res) => res.json())
       .then((data) => setArticles(data))
       .catch((err) => console.error("Error fetching from backend:", err));
   }, []);
 
-  
+
   return (
     <>
       <Helmet>

@@ -163,6 +163,12 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .header_two{
+    gap: 12px;
+  }
+}
+
 /* Animations */
 @keyframes slideDown {
   0% {
