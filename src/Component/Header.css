@@ -168,6 +168,9 @@
     display: none;
     margin-top: 2px;
   }
+  .menu_list {
+    top: 110px !important;
+}
 
   
 }
