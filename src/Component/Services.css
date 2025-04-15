@@ -132,11 +132,15 @@
     }
   
     .service-card p {
-      font-size: 12px;
+      font-size: 13px;
     }
 
     .service_viewmore {
       width: 25%;
+    }
+
+    .er-docs{
+      display: block !important;
     }
   }
   

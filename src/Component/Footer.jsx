@@ -65,22 +65,22 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>📞 +91 89399 41406</p>
-          <p>📧 naveen.sankar@rudronilfinserv.com</p>
+          <p>📞  <a href="tel:+918939941406">+91 89399 41406</a></p>
+          <p>📧 <a href="mailto:naveen.sankar@rudronilfinserv.com">naveen.sankar@rudronilfinserv.com</a></p>
           <p>📍 MJT Building, First Floor 9-A, </p>
           <p>Bharathiyar Road, P.N. Palayam,</p>
           <p>Coimbatore-641 037</p>
           
           <div className="social-footer">
             
-            <p className="foot-path">
-              <FontAwesomeIcon icon={faFacebook} /> 
+            <p className="foot-path"><a href="https://www.facebook.com/share/12KMsgsHPqQ/" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} /> </a>
             </p>
             <p className="foot-path">
-              <FontAwesomeIcon icon={faInstagram} /> 
+            <a href="https://www.instagram.com/rudronil_finserv?igsh=MXg2YTN0MnU5dmp4cw==" target="_blank"><FontAwesomeIcon icon={faInstagram} /> </a>
             </p>
             <p className="foot-path">
-              <FontAwesomeIcon icon={faLinkedin} /> 
+            <a href="#"><FontAwesomeIcon icon={faLinkedin} /> </a> 
             </p>
           </div>
         </div>

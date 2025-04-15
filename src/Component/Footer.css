@@ -50,6 +50,12 @@
   
   .footer-contact p {
     margin: 8px 0;
+   
+  }
+
+  .footer-contact a{
+    text-decoration: none;
+    color: black;
   }
 
   .foot-path path{

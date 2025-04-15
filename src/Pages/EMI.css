@@ -30,6 +30,10 @@
     margin-bottom: 15px;
     text-align: left;
   }
+
+  .emi-chart h2{
+    color: black;
+  }
   
   .input-group label {
     display: block;
@@ -77,7 +81,14 @@
   
     .emi-calculator,
     .emi-chart {
-      width: 100%;
+      width: 75%;
     }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .emi-calculator, .emi-chart {
+      width: 75%;
+  }
+    
   }
   
