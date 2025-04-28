@@ -1,0 +1,103 @@
+/* src/pages/Dashboard.css */
+
+.dashboard-container {
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1698b3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header button {
+    background: white;
+    color: #1698b3;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .add-customer-section,
+  .customer-table-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .add-customer-section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .add-customer-section input,
+  .add-customer-section select {
+    flex: 1 1 200px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .add-customer-section button {
+    padding: 10px 20px;
+    background-color: #1698b3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .customer-table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .customer-table-section th,
+  .customer-table-section td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .customer-table-section th {
+    background-color: #1698b3;
+    color: white;
+  }
+  
+  .customer-table-section button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .customer-table-section button:hover {
+    opacity: 0.85;
+  }
+  
+  @media (max-width: 768px) {
+    .add-customer-section form {
+      flex-direction: column;
+    }
+  
+    .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  td{
+    color: black;
+  }

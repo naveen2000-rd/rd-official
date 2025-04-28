@@ -8,6 +8,10 @@ import ServicesList from "./Pages/Services";
 import EMICalculator from "./Pages/EMI";
 import ContactUs from "./Pages/ContactUS";
 import Blogs from "./Pages/Blog";
+import Login from "./Pages/Login";
+import Dashboard from "./Pages/Dashboard";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+
 
 
 
@@ -23,6 +27,9 @@ function App() {
         <Route path="/emi-calculator" element={<EMICalculator />} />
         <Route path="/blog" element={<Blogs />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/adminlogin" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
       </Routes>
       <Footer />

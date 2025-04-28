@@ -1,0 +1,72 @@
+.privacy-container {
+    background-color: #0899B8;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  .privacy-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .privacy-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-header .tagline {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .privacy-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h2 {
+    margin-bottom: 15px;
+    color: #0899B8;
+  }
+  
+  .card p, .card ul {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .card ul {
+    padding-left: 20px;
+  }
+  
+  .card li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .privacy-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: 90%;
+    }
+  }
+  
